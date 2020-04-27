@@ -32,7 +32,7 @@ public class Domineering {
 			clear();
 			print(dom, n);
 			String[] strs;
-			validMove = validate(dom,counter%2,n);
+			validMove = validate(dom,counter % 2,n);
 			if(!validMove) 
 				break;
 			do {
@@ -93,9 +93,9 @@ public class Domineering {
 			dom[first][second - 1] = 'V';
 		}
 	}
-	private boolean validate(char[][] dom, int counter, int n) {
+	private boolean validate(char[][] dom, int player, int n) {
 		int count=0;
-		if (counter == 0) {
+		if (player == 0) {
 			// horizontal
 			for(int i = 0; i < n ; i++) {
 				for(int j = 0; j < n-1 ; j++) {
